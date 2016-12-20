@@ -148,6 +148,18 @@ class MenuSeeder extends Seeder
                 'icon' => 'fa fa-cloud',
                 'created_at' => $created_at,
                 'updated_at' => $updated_at,
+            ],
+            [
+                'title' => '博客管理',
+                'slug' => 'log.blog.manage',
+                'route' => 'log.blog.index',
+                'uri' => '',
+                'status' => 1,
+                'desc' => '博客管理',
+                'sort' => 0,
+                'icon' => 'fa fa-cloud',
+                'created_at' => $created_at,
+                'updated_at' => $updated_at,
             ]
         ];
 
