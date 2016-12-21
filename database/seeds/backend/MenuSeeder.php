@@ -98,9 +98,10 @@ class MenuSeeder extends Seeder
             ],
             [
                 'title' => '博客管理',
-                'slug' => 'log.blog.manage',
-                'route' => 'log.blog.index',
+                'slug' => 'blog.manage',
+                'route' => 'blog.index',
                 'uri' => '',
+                'high_uri' => 'blog.*',
                 'status' => 1,
                 'desc' => '博客管理',
                 'sort' => 0,
