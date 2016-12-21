@@ -28,6 +28,9 @@ $router->group(['namespace' => 'Backend', 'middleware' => ['auth', 'menu.permiss
 
 	/*菜单*/
 	require(__DIR__ . '/backend/menuRoute.php');
+
+	/*文章*/
+	require(__DIR__ . '/backend/articleRoute.php');
 });
 
 Auth::routes();
