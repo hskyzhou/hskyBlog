@@ -25,12 +25,7 @@
 		}
 
 		public function compose(View $view){
-			$routeName = request()->route()->getName();
-			$currentMenu = $this->menuRepo->findByField('route', $routeName)->first();
-
 			$userPermissions = $this->permissionRepo->userPermissions()->keys();
-
-			$parentMenus = $this->menuRelationRepo->parentMenus();
 
 			$menuRelations = $this->menuRelationRepo->all()->keyBy('menu_id')->keys();
 
@@ -48,12 +43,12 @@
 					 	}
 					}
 				}else{
-					return true;
+					if(!$menuRelations->contains($item->id)){
+						return true;
+					}
 				}
 			});
 
 			$view->with('menus', $menus);
-			$view->with('parentMenus', $parentMenus);
-			$view->with('currentMenu', $currentMenu);
 		}
 	}
