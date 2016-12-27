@@ -34,5 +34,5 @@ $router->group([], function($router){
 		]);
 	});
 
-	$router->resource('menu', 'ArticleController');
+	$router->resource('article', 'ArticleController');
 });

@@ -8,12 +8,15 @@ use App\Repositories\Contracts\ArticleRepository;
 use App\Repositories\Models\Article;
 use App\Repositories\Validators\ArticleValidator;
 
+use App\Traits\EloquentTrait;
+
 /**
  * Class ArticleRepositoryEloquent
  * @package namespace App\Repositories\Eloquent;
  */
 class ArticleRepositoryEloquent extends BaseRepository implements ArticleRepository
 {
+    use EloquentTrait;
     /**
      * Specify Model class name
      *

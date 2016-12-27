@@ -17,7 +17,6 @@ class PermissionController extends Controller{
     protected $service;
     protected $theme = '';
     protected $folder = '';
-
     public function __construct(Service $service){
     	$this->service = $service;
     	$this->folder = $this->getTheme() . $this->getModule();

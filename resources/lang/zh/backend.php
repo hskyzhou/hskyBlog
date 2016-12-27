@@ -40,4 +40,11 @@ return [
 		'detail' => '日志详情',
 		'filter' => '日志过滤',
 	],
+
+	'article' => [
+		'manage' => '文章管理',
+		'list' => '文章列表',
+		'create' => '添加文章',
+		'update' => '修改文章',
+	],
 ];

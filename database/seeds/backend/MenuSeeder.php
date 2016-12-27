@@ -23,7 +23,7 @@ class MenuSeeder extends Seeder
         		'slug' => 'system.manage',
         		'route' => '',
         		'uri' => '',
-                'high_uri' => "permission.*,role.*,user.*,menu.*,log-viewer::*,log-viewer::logs.*",
+                'high_uri' => "permission.*,role.*,user.*,menu.*,log-viewer::*,log-viewer::logs.*,article.*",
         		'status' => 1,
         		'desc' => '系统管理',
         		'sort' => 0,

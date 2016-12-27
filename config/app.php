@@ -188,6 +188,7 @@ return [
         Laracasts\Flash\FlashServiceProvider::class,                    //Flash
         Arcanedev\LogViewer\LogViewerServiceProvider::class,            //系统日志
         Laravelista\Ekko\EkkoServiceProvider::class,                    //active类
+
     ],
 
     /*

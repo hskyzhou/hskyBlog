@@ -40,4 +40,11 @@ return [
 		'detail' => 'Log Detail',
 		'filter' => 'Log Filter',
 	],
+
+	'article' => [
+		'manage' => 'Article Manage',
+		'list' => 'Article List',
+		'create' => 'Add Article',
+		'update' => 'Edit Article',
+	],
 ];

@@ -35,4 +35,9 @@ return [
 		'status' => '状态',
 		'permission' => '权限'
 	],
+
+	'article' => [
+		'name' => '文章标题',
+		'status' => '状态',
+	],
 ];
