@@ -10,6 +10,8 @@ class Article extends Model implements Transformable
 {
     use TransformableTrait;
 
-    protected $fillable = [];
+    protected $fillable = [
+    	'name', 'short_name', 'markdown', 'html', 'creator_id', 'status', 'created_at', 'updated_at',
+    ];
 
 }

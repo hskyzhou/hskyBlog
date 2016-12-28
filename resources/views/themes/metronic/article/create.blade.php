@@ -10,6 +10,13 @@
   <link href="{{asset('themes/metronic/global/plugins/bootstrap-select/css/bootstrap-select.min.css')}}" rel="stylesheet" type="text/css" />
   <link href="{{asset('themes/metronic/global/plugins/select2/css/select2.min.css')}}" rel="stylesheet" type="text/css" />
   <link href="{{asset('themes/metronic/global/plugins/select2/css/select2-bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+
+  <link href="{{asset('mdeditor/css/editormd.min.css')}}" rel="stylesheet" type="text/css">
+  <style type="text/css"> 
+    [class*=" fa-"]:not(.fa-stack), [class*=" glyphicon-"], [class*=" icon-"], [class^=fa-]:not(.fa-stack), [class^=glyphicon-], [class^=icon-]{
+      display: none;
+    }
+  </style>
 @endsection
 
 
@@ -43,6 +50,15 @@
                               <span class="help-block">Some help goes here...</span>
                           </div>
                       </div>
+
+                      <div class="form-group form-md-line-input">
+                          <label class="col-md-2 control-label" for="form_control_1">{{trans('label.article.short_name')}}</label>
+                          <div class="col-md-8">
+                              <input type="text" class="form-control" placeholder="" name="short_name">
+                              <div class="form-control-focus"> </div>
+                              <span class="help-block">Some help goes here...</span>
+                          </div>
+                      </div>
                       
                       <div class="form-group form-md-line-input">
                         <label class="col-md-2 control-label" for="form_control_1">{{trans('label.article.status')}}</label>
@@ -66,10 +82,14 @@
                         </div>
                       </div>
 
-                      <div class="editor">
-                          // 创建一个 textarea 而已，具体的看手册，主要在于它的 id 为 myEditor
-                          <textarea id='myEditor'></textarea>
-                      </div>
+                      <div class="form-group form-md-line-input">
+                        <label class="col-md-2 control-label" for="form_control_1">{{trans('label.article.content')}}</label>
+                        <div class="col-md-8">
+                          <div id="editormd">
+                              <textarea style="display:none;"></textarea>
+                          </div>
+                        </div>
+                      </div>                      
                   </div>
                   <div class="form-actions">
                       <div class="row">
@@ -102,4 +122,13 @@
     $(".select2, .select2-multiple").select2({
     });
 	</script>
+
+  <script src="{{asset('mdeditor/editormd.min.js')}}"></script>
+  <script type="text/javascript">      
+      var editor = editormd("editormd", {
+          height  : 640,
+          saveHTMLToTextarea : true,
+          path : "/mdeditor/lib/" // Autoload modules mode, codemirror, marked... dependents libs path
+      });
+  </script>
 @endsection

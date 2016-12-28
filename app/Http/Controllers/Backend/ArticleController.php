@@ -38,7 +38,7 @@ class ArticleController extends Controller
         $results = $this->service->store();
         if($results['result']){
             flash($results['message'], 'success');
-            return redirect()->route('permission.index');
+            return redirect()->route('article.index');
         }else{
             flash($results['message'], 'danger');
             return redirect()->back();
@@ -50,9 +50,7 @@ class ArticleController extends Controller
         
         if($results['result']){
             $info = $results['info'];
-            $permissions = $results['permissions'];
-
-            return view($this->getview('edit'), compact('info', 'permissions'));
+            return view($this->getview('edit'))->with($results);
         }else{
             return $results['message'];
         }
@@ -63,7 +61,7 @@ class ArticleController extends Controller
 
         if($results['result']){
             flash($results['message'], 'success');
-            return redirect()->route('permission.index');
+            return redirect()->route('article.index');
         }else{
             flash($results['message'], 'danger');
             return redirect()->back();

@@ -65,10 +65,10 @@ class ArticleService{
 	}
 
 	private function createButton($id, $status){
-	    $updateUrl = route('permission.edit', [$id]);
-	    $destroyUrl = route('permission.destroy', [$id]);
-	    $deleteUrl = route('permission.delete', [$id]);
-	    $restoreUrl = route('permission.restore', [$id]);
+	    $updateUrl = route('article.edit', [$id]);
+	    $destroyUrl = route('article.destroy', [$id]);
+	    $deleteUrl = route('article.delete', [$id]);
+	    $restoreUrl = route('article.restore', [$id]);
 
 	    $btnUpdate = "<a class='btn yellow btn-outline sbold' href='{$updateUrl}'><i class='fa fa-pencil'></i></a>";
 	    $btnOther = "";
@@ -96,20 +96,17 @@ class ArticleService{
 			'message' => '添加失败'
 		];
 
+		$creaotrId = getUserId();
 		$data = [
 			'name' => request('name'),
-			'slug' => request('slug'),
-			'position' => request('position'),
-			'status' => request('status'),
-			'description' => request('description', ''),
-			'model' => request('model', '')
+			'short_name' => request('short_name', ''),
+			'markdown' => request('editormd-markdown-doc'),
+			'html' => request('editormd-html-code'),
+			'creator_id' => $creaotrId,
+			'status' => request('status', getStatusActive()),
 		];
 
-		if($permissionInfo = $this->articleRepo->create($data)){
-			/*添加前置权限*/
-			$permissions = request('permission');
-			$permissionInfo->prePermissions()->attach($permissions);
-
+		if($articleInfo = $this->articleRepo->create($data)){
 			/*记录日志*/
 			$this->recordLog();
 
@@ -130,19 +127,13 @@ class ArticleService{
 			'result' => false,
 			'message' => '获取失败',
 			'info' => '',
-			'permissions' => collect([]),
 		];
 
-		$permissions = $this->articleRepo->permissionList();
-
-		$info = $this->articleRepo->with('prePermissions')->find($id);
-
-		if($info){
+		if($info = $this->articleRepo->find($id)){
 			$returnData = array_merge($returnData, [
 				'result' => true,
 				'message' => '获取成功',
 				'info' => $info,
-				'permissions' => $permissions,
 			]);
 		}
 
@@ -157,20 +148,15 @@ class ArticleService{
 
 		$data = [
 			'name' => request('name'),
-			'slug' => request('slug'),
-			'position' => request('position'),
-			'status' => request('status'),
-			'description' => request('description', ''),
-			'model' => request('model', '')
+			'short_name' => request('short_name', ''),
+			'markdown' => request('editormd-markdown-doc'),
+			'html' => request('editormd-html-code'),
 		];
 
 		$info = $this->articleRepo->find($id);
 		if($info){
 			if($this->articleRepo->update($data, $id)){
-				/*修改前置权限*/
-				$permissions = request('permission');
-				$info->prePermissions()->sync($permissions);
-
+				
 				$returnData = array_merge($returnData, [
 					'result' => true,
 					'message' => '修改成功'

@@ -38,6 +38,8 @@ return [
 
 	'article' => [
 		'name' => '文章标题',
+		'short_name' => '短标题',
 		'status' => '状态',
+		'content' => '内容',
 	],
 ];
