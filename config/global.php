@@ -1,7 +1,11 @@
 <?php 
 return [
 	'redisKey' => 'hsky:',
-	'theme' => 'themes.metronic.',
+	'theme' => [
+		'backend' => 'themes.metronic.',
+		'front' => 'themes.oneuiblog.',
+	],
+
 	'system' => [
 		'name' => 'hsky'
 	],

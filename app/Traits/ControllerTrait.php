@@ -7,7 +7,11 @@
 		
 		/*获取项目主题*/
 		public function getTheme(){
-			return config('global.theme');
+			return config('global.theme.backend');
+		}
+
+		public function getFrontTheme(){
+			return config('global.theme.front');
 		}
 
 		/*获取项目模板文件夹*/
