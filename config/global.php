@@ -3,7 +3,7 @@ return [
 	'redisKey' => 'hsky:',
 	'theme' => [
 		'backend' => 'themes.metronic.',
-		'front' => 'themes.oneuiblog.',
+		'front' => 'themes.blogoneui.',
 	],
 
 	'system' => [

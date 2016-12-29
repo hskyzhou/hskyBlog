@@ -1,37 +1,37 @@
 <?php 
-	namespace App\Traits;
+namespace App\Traits;
 
-	use Route;
+use Route;
 
-	Trait ControllerTrait{
-		
-		/*获取项目主题*/
-		public function getTheme(){
-			return config('global.theme.backend');
-		}
-
-		public function getFrontTheme(){
-			return config('global.theme.front');
-		}
-
-		/*获取项目模板文件夹*/
-		public function getModule(){
-			$moduleName = '';
-
-			$actionName = Route::current()->getActionName();
-
-			$lastActionName = class_basename($actionName);  //获取controller@method
-
-			if(str_contains($lastActionName, '@')){
-				list($actionControllerName, $actionMethodName) = explode('@', $lastActionName);
-				$moduleName = strtolower(str_replace('Controller', '', $actionControllerName)) . '.';
-			}
-
-			return $moduleName;
-		}
-
-		/*获取文件路径*/
-		public function getView($fileName){
-			return $this->folder . $fileName;
-		}
+Trait ControllerTrait{
+	
+	/*获取项目主题*/
+	public function getTheme(){
+		return config('global.theme.backend');
 	}
+
+	public function getFrontTheme(){
+		return config('global.theme.front');
+	}
+
+	/*获取项目模板文件夹*/
+	public function getModule(){
+		$moduleName = '';
+
+		$actionName = Route::current()->getActionName();
+
+		$lastActionName = class_basename($actionName);  //获取controller@method
+
+		if(str_contains($lastActionName, '@')){
+			list($actionControllerName, $actionMethodName) = explode('@', $lastActionName);
+			$moduleName = strtolower(str_replace('Controller', '', $actionControllerName)) . '.';
+		}
+
+		return $moduleName;
+	}
+
+	/*获取文件路径*/
+	public function getView($fileName){
+		return $this->folder . $fileName;
+	}
+}
