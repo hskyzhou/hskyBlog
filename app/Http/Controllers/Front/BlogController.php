@@ -21,6 +21,7 @@ class BlogController extends Controller
 
     public function index(){
     	$results = $this->service->index();
+        
     	return view($this->getView('index'))->with($results);
     }
 

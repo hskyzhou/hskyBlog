@@ -18,6 +18,9 @@ class CreateArticlesTable extends Migration
 
             $table->string('name')->comment('文章标题');
             $table->string('short_name')->comment('文章短标题');
+            $table->text('description')->comment('描述');
+            $table->string('logo')->comment('文章logo');
+            $table->integer('user_id')->comment('作者id');
             $table->text('markdown')->comment('markdown内容');
             $table->text('html')->comment('markdown的html');
             $table->integer('creator_id')->comment('文章作者');
