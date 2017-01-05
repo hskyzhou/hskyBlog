@@ -147,6 +147,19 @@ class MenuSeeder extends Seeder
                 'icon' => 'fa fa-cloud',
                 'created_at' => $created_at,
                 'updated_at' => $updated_at,
+            ],
+            [
+                'title' => '博客管理',
+                'slug' => 'blog.manage',
+                'route' => '',
+                'uri' => '',
+                'high_uri' => 'article.*',
+                'status' => 1,
+                'desc' => '博客管理',
+                'sort' => 0,
+                'icon' => 'fa fa-cloud',
+                'created_at' => $created_at,
+                'updated_at' => $updated_at,
             ]
         ];
 
@@ -179,7 +192,7 @@ class MenuSeeder extends Seeder
                 'sort' => 4,
             ],
             [
-                'menu_id' => 7,
+                'menu_id' => 11,
                 'parent_menu_id' => 1,
                 'sort' => 5,
             ],
@@ -197,6 +210,11 @@ class MenuSeeder extends Seeder
                 'menu_id' => 10,
                 'parent_menu_id' => 8,
                 'sort' => 1,
+            ],
+            [
+                'menu_id' => 7,
+                'parent_menu_id' => 11,
+                'sort' => 0,
             ]
         ];
         MenuRelation::insert($menuRelationData);

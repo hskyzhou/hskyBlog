@@ -2,7 +2,7 @@
 
 @section('content')
 	<div class="bg-image" style="background-image: url('assets/img/photos/photo23@2x.jpg');">
-	    <div class="bg-primary-op">
+	    <div class="bg-primary-dark">
 	        <section class="content content-full content-boxed overflow-hidden">
 	            <!-- Section Content -->
 	            <div class="push-150-t push-150 text-center">
@@ -20,91 +20,11 @@
 	    <section class="content content-boxed">
 	        <!-- Section Content -->
 	        <div class="text-center">
-	            <a class="link-effect font-s13 font-w600" href="javascript:void(0)">John Doe</a> on July 16, 2015 &bull; <em>5 min</em>
+	            <a class="link-effect font-s13 font-w600" href="javascript:void(0)">{{$articleInfo->user->name}}</a> on {{$articleInfo->created_at->format('M d, Y')}} &bull; <em>5 min</em>
 	        </div>
 	        <div class="row push-50-t push-50 nice-copy-story">
 	            <div class="col-sm-8 col-sm-offset-2">
-	                <p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci.</p>
-
-	                <!-- Gallery (.js-gallery class is initialized in App() -> uiHelperMagnific()) -->
-	                <!-- For more info and examples you can check out http://dimsemenov.com/plugins/magnific-popup/ -->
-	                <div class="content-grid">
-	                    <div class="row js-gallery">
-	                        <div class="col-xs-6 animated fadeIn">
-	                            <a class="img-link" href="assets/img/photos/photo21@2x.jpg">
-	                                <img class="img-responsive" src="assets/img/photos/photo21.jpg" alt="">
-	                            </a>
-	                        </div>
-	                        <div class="col-xs-6 animated fadeIn">
-	                            <a class="img-link" href="assets/img/photos/photo22@2x.jpg">
-	                                <img class="img-responsive" src="assets/img/photos/photo22.jpg" alt="">
-	                            </a>
-	                        </div>
-	                    </div>
-	                </div>
-	                <!-- END Gallery -->
-
-	                <p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci.</p>
-
-	                <h3 class="font-w400 text-black push-50-t push-20">Experiences</h3>
-	                <p>Felis ullamcorper curae erat nulla luctus sociosqu phasellus posuere habitasse sollicitudin, libero sit potenti leo ultricies etiam blandit id platea augue, erat habitant fermentum lorem commodo taciti tristique etiam curabitur suscipit lacinia habitasse amet mauris eu eget ipsum nec magna in, adipiscing risus aenean turpis proin duis fringilla praesent ornare lorem eros malesuada vitae nullam diam velit potenti consectetur, vehicula accumsan risus lectus tortor etiam facilisis tempus sapien tortor, mi vestibulum taciti dapibus viverra ac justo vivamus erat phasellus turpis nisi class praesent duis ligula, vel ornare faucibus potenti nibh turpis, at id semper nunc dui blandit. Enim et nec habitasse ultricies id tortor curabitur, consectetur eu inceptos ante conubia tempor platea odio, sed sem integer lacinia cras non risus euismod turpis platea erat ultrices iaculis rutrum taciti, fusce lobortis adipiscing dapibus habitant sodales gravida pulvinar, elementum mi tempus ut commodo congue ipsum justo nec dui cursus scelerisque elementum volutpat tellus nulla laoreet taciti, nibh suspendisse primis arcu integer vulputate etiam ligula lobortis nunc, interdum commodo libero aliquam suscipit phasellus sollicitudin arcu varius venenatis erat ornare tempor nullam donec vitae etiam tellus.</p>
-
-	                <h3 class="font-w400 text-black push-50-t push-20">Exploring</h3>
-	                <p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci.</p>
-
-	                <!-- Gallery (.js-gallery class is initialized in App() -> uiHelperMagnific()) -->
-	                <!-- For more info and examples you can check out http://dimsemenov.com/plugins/magnific-popup/ -->
-	                <div class="content-grid">
-	                    <div class="row js-gallery">
-	                        <div class="col-xs-12 animated fadeIn">
-	                            <a class="img-link" href="assets/img/photos/photo23@2x.jpg">
-	                                <img class="img-responsive" src="assets/img/photos/photo23@2x.jpg" alt="">
-	                            </a>
-	                        </div>
-	                        <div class="col-xs-6 animated fadeIn">
-	                            <a class="img-link" href="assets/img/photos/photo24@2x.jpg">
-	                                <img class="img-responsive" src="assets/img/photos/photo24.jpg" alt="">
-	                            </a>
-	                        </div>
-	                        <div class="col-xs-6 animated fadeIn">
-	                            <a class="img-link" href="assets/img/photos/photo14@2x.jpg">
-	                                <img class="img-responsive" src="assets/img/photos/photo14.jpg" alt="">
-	                            </a>
-	                        </div>
-	                    </div>
-	                </div>
-	                <!-- END Gallery -->
-
-	                <p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci.</p>
-
-	                <h3 class="font-w400 text-black push-50-t push-20">Memories</h3>
-	                <p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci.</p>
-
-	                <!-- Actions -->
-	                <div class="push-50-t clearfix">
-	                    <div class="btn-toolbar pull-right">
-	                        <a class="btn btn-default" data-toggle="tooltip" title="Like Story" href="javascript:void(0)"><i class="fa fa-thumbs-o-up"></i></a>
-	                        <div class="btn-group dropup">
-	                            <a class="btn btn-default dropdown-toggle" data-toggle="dropdown"  href="javascript:void(0)"><i class="fa fa-share-alt"></i> Share</a>
-	                            <ul class="dropdown-menu dropdown-menu-right">
-	                                <li>
-	                                    <a tabindex="-1" href="javascript:void(0)"><i class="fa fa-fw fa-facebook pull-right"></i> Facebook</a>
-	                                </li>
-	                                <li>
-	                                    <a tabindex="-1" href="javascript:void(0)"><i class="fa fa-fw fa-twitter pull-right"></i> Twitter</a>
-	                                </li>
-	                                <li>
-	                                    <a tabindex="-1" href="javascript:void(0)"><i class="fa fa-fw fa-google-plus pull-right"></i> Google+</a>
-	                                </li>
-	                                <li>
-	                                    <a tabindex="-1" href="javascript:void(0)"><i class="fa fa-fw fa-linkedin pull-right"></i> LinkedIn</a>
-	                                </li>
-	                            </ul>
-	                        </div>
-	                    </div>
-	                    <a class="btn btn-success" href="javascript:void(0)"><i class="fa fa-heart push-5-r"></i> Recommend</a>
-	                </div>
-	                <!-- END Actions -->
+	                {!! $articleInfo->html !!}
 	            </div>
 	        </div>
 	        <!-- END Section Content -->

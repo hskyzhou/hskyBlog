@@ -22,8 +22,6 @@
 	            <div class="col-md-8">
 	                {!! $presenter->showArticleList($articleList) !!}
 
-	                
-
 	                <!-- Pagination -->
 	                <nav>
 	                    <ul class="pagination">

@@ -14,4 +14,8 @@ class Article extends Model implements Transformable
     	'name', 'short_name', 'markdown', 'html', 'creator_id', 'status', 'created_at', 'updated_at',
     ];
 
+    /*scope*/
+    public function user(){
+    	return $this->hasOne(\App\User::class, 'id', 'creator_id');
+    }
 }

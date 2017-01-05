@@ -15,7 +15,7 @@ class BlogService{
 
 	public function index(){
 		/*获取文章*/
-		$articleList = $this->articleRepo->paginate(6);
+		$articleList = $this->articleRepo->with(['user'])->paginate(6);
 
 		return [
 			'articleList' => $articleList
@@ -23,6 +23,11 @@ class BlogService{
 	}
 
 	public function show($id){
-		
+		/*文章详情*/
+		$articleInfo = $this->articleRepo->with(['user'])->find($id);
+
+		return [
+			'articleInfo' => $articleInfo
+		];
 	}
 }
