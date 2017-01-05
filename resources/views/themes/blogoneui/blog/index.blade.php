@@ -73,16 +73,16 @@
 	                    </div>
 	                    <div class="block-content block-content-full text-center">
 	                        <div>
-	                            <img class="img-avatar img-avatar96" src="assets/img/avatars/avatar1.jpg" alt="">
+	                            <img class="img-avatar img-avatar96" src="{{$userInfo->avatar}}" alt="">
 	                        </div>
-	                        <div class="h5 push-15-t push-5">Evelyn Willis</div>
+	                        <div class="h5 push-15-t push-5">{{$userInfo->name}}</div>
 	                        <div class="font-s13 text-muted">Publisher</div>
 	                    </div>
 	                    <div class="block-content border-t">
 	                        <div class="row items-push text-center">
 	                            <div class="col-xs-6">
 	                                <div class="push-5"><i class="si si-pencil fa-2x"></i></div>
-	                                <div class="h5 font-w300 text-muted">350 Stories</div>
+	                                <div class="h5 font-w300 text-muted">{{$count}} Stories</div>
 	                            </div>
 	                            <div class="col-xs-6">
 	                                <div class="push-5"><i class="si si-users fa-2x"></i></div>
@@ -105,34 +105,7 @@
 	                    </div>
 	                    <div class="block-content">
 	                        <ul class="list list-simple">
-	                            <li>
-	                                <div class="push-5 clearfix">
-	                                    <span class="font-s13 text-muted push-10-l pull-right">25 min ago</span>
-	                                    <a class="font-w600" href="base_pages_profile.html">Helen Silva</a> on <a href="frontend_blog_story.html">Exploring the Alps</a>
-	                                </div>
-	                                <div class="font-s13">Awesome trip! Looking forward going there, I'm sure it will be a great experience!</div>
-	                            </li>
-	                            <li>
-	                                <div class="push-5 clearfix">
-	                                    <span class="font-s13 text-muted push-10-l pull-right">42 min ago</span>
-	                                    <a class="font-w600" href="base_pages_profile.html">Denise Watson</a> on <a href="frontend_blog_story.html">Travel &amp; Work</a>
-	                                </div>
-	                                <div class="font-s13">Thank you for sharing your story with us! I really appreciate the info, it will come in handy for sure!</div>
-	                            </li>
-	                            <li>
-	                                <div class="push-5 clearfix">
-	                                    <span class="font-s13 text-muted push-10-l pull-right">53 min ago</span>
-	                                    <a class="font-w600" href="base_pages_profile.html">Roger Hart</a> on <a href="frontend_blog_story.html">Black &amp; White</a>
-	                                </div>
-	                                <div class="font-s13">Really touching story.. I'm so happy everything went well at the end!</div>
-	                            </li>
-	                            <li>
-	                                <div class="push-5 clearfix">
-	                                    <span class="font-s13 text-muted push-10-l pull-right">2 days ago</span>
-	                                    <a class="font-w600" href="base_pages_profile.html">Adam Hall</a> on <a href="frontend_blog_story.html">Sleep Better</a>
-	                                </div>
-	                                <div class="font-s13">Great advice! Thanks for sharing, I'm sure it will help many people sleep better and improve their lifes.</div>
-	                            </li>
+	                            {!! $presenter->showCommentList($comments) !!}
 	                        </ul>
 	                        <div class="text-center push">
 	                            <small><a href="javascript:void(0)">Read More..</a></small>

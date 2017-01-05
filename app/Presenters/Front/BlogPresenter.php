@@ -41,4 +41,24 @@ class BlogPresenter{
 		}
 		return $str;
 	}
+
+
+	/*显示评论*/
+	public function showCommentList($comments){
+		$str = '';
+
+		if(!$comments->isEmpty()){
+			foreach($comments as $comment){
+				$str .= '<li>';
+				$str .= '    <div class="push-5 clearfix">';
+				$str .= '        <span class="font-s13 text-muted push-10-l pull-right">25 min ago</span>';
+				$str .= '        <a class="font-w600" href="base_pages_profile.html">'.$comment->commentor.'</a> on <a href="'.route('blog.show', [$comment->article_id]).'">'.$comment->article->name.'</a>';
+				$str .= '    </div>';
+				$str .= '    <div class="font-s13">'.$comment->comment.'</div>';
+				$str .= '</li>';
+			}
+		}
+
+		return $str;
+	}
 }

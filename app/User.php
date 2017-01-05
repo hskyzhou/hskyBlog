@@ -41,4 +41,8 @@ class User extends Authenticatable implements HasRoleAndPermissionContract
     {
         return (!$this->permissions) ? $this->permissions = $this->rolePermissions()->get()->merge($this->userPermissions()->get()) : $this->permissions;
     }
+
+    public function articles(){
+        return $this->hasMany(\App\Repositories\Models\Article::class, 'creator_id', 'id');
+    }
 }
