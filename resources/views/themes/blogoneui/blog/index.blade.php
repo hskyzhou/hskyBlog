@@ -93,6 +93,24 @@
 	                </a>
 	                <!-- END About -->
 
+	                <!-- Social -->
+	                <div class="block">
+	                    <div class="block-header bg-gray-lighter">
+	                        <h3 class="block-title">Social</h3>
+	                    </div>
+	                    <div class="block-content block-content-full">
+	                        <div class="btn-group">
+	                            <a class="btn btn-default" href="javascript:void(0)" data-toggle="tooltip" title="Follow us on Twitter"><i class="fa fa-fw fa-twitter"></i></a>
+	                            <a class="btn btn-default" href="javascript:void(0)" data-toggle="tooltip" title="Like our Facebook page"><i class="fa fa-fw fa-facebook"></i></a>
+	                            <a class="btn btn-default" href="javascript:void(0)" data-toggle="tooltip" title="Follow us on Google Plus"><i class="fa fa-fw fa-google-plus"></i></a>
+	                            <a class="btn btn-default" href="javascript:void(0)" data-toggle="tooltip" title="Follow us on Dribbble"><i class="fa fa-fw fa-dribbble"></i></a>
+	                            <a class="btn btn-default" href="javascript:void(0)" data-toggle="tooltip" title="Subscribe on Youtube"><i class="fa fa-fw fa-youtube"></i></a>
+	                            <a class="btn btn-default" href="javascript:void(0)" data-toggle="tooltip" title="Subscribe on Youtube"><i class="fa fa-fw fa-youtube"></i></a>
+	                        </div>
+	                    </div>
+	                </div>
+	                <!-- END Social -->
+
 	                <!-- Recent Comments -->
 	                <div class="block">
 	                    <div class="block-header bg-gray-lighter">
@@ -113,23 +131,6 @@
 	                    </div>
 	                </div>
 	                <!-- END Recent Comments -->
-
-	                <!-- Social -->
-	                <div class="block">
-	                    <div class="block-header bg-gray-lighter">
-	                        <h3 class="block-title">Social</h3>
-	                    </div>
-	                    <div class="block-content block-content-full">
-	                        <div class="btn-group">
-	                            <a class="btn btn-default" href="javascript:void(0)" data-toggle="tooltip" title="Follow us on Twitter"><i class="fa fa-fw fa-twitter"></i></a>
-	                            <a class="btn btn-default" href="javascript:void(0)" data-toggle="tooltip" title="Like our Facebook page"><i class="fa fa-fw fa-facebook"></i></a>
-	                            <a class="btn btn-default" href="javascript:void(0)" data-toggle="tooltip" title="Follow us on Google Plus"><i class="fa fa-fw fa-google-plus"></i></a>
-	                            <a class="btn btn-default" href="javascript:void(0)" data-toggle="tooltip" title="Follow us on Dribbble"><i class="fa fa-fw fa-dribbble"></i></a>
-	                            <a class="btn btn-default" href="javascript:void(0)" data-toggle="tooltip" title="Subscribe on Youtube"><i class="fa fa-fw fa-youtube"></i></a>
-	                        </div>
-	                    </div>
-	                </div>
-	                <!-- END Social -->
 	            </div>
 	        </div>
 	    </div>

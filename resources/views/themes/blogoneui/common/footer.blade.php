@@ -1,7 +1,7 @@
 <footer id="page-footer" class="bg-white">
-    <div class="content content-boxed">
+    <div class="content-boxed">
         <!-- Footer Navigation -->
-        <div class="row push-30-t items-push-2x">
+       {{--  <div class="row push-30-t items-push-2x">
             <div class="col-sm-4">
                 <h3 class="h5 font-w600 text-uppercase push-20">Company</h3>
                 <ul class="list list-simple-mini font-s13">
@@ -54,7 +54,7 @@
                     <i class="si si-envelope-open"></i> company@example.com
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- END Footer Navigation -->
 
         <!-- Copyright Info -->
