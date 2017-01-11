@@ -31,6 +31,9 @@ $router->group(['namespace' => 'Backend', 'middleware' => ['auth', 'menu.permiss
 
 	/*文章*/
 	require(__DIR__ . '/backend/articleRoute.php');
+
+	/*博客*/
+	require(__DIR__ . '/backend/blogRoute.php');
 });
 
 /*前台功能*/
