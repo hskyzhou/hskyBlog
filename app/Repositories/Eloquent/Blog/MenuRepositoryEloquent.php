@@ -1,19 +1,17 @@
 <?php
 
-namespace App\Repositories\Eloquent;
+namespace App\Repositories\Eloquent\Blog;
 
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
-use App\Repositories\Contracts\BlogMenuRepository;
-use App\Repositories\Models\BlogMenu;
-use App\Repositories\Validators\BlogMenuValidator;
+use App\Repositories\Contracts\Blog\MenuRepository;
+use App\Repositories\Models\Blog\Menu;
 
 /**
- * Class BlogMenuRepositoryEloquent
+ * Class MenuRepositoryEloquent
  * @package namespace App\Repositories\Eloquent;
  */
-class BlogMenuRepositoryEloquent extends BaseRepository implements BlogMenuRepository
-{
+class MenuRepositoryEloquent extends BaseRepository implements MenuRepository{
     /**
      * Specify Model class name
      *
@@ -21,10 +19,8 @@ class BlogMenuRepositoryEloquent extends BaseRepository implements BlogMenuRepos
      */
     public function model()
     {
-        return BlogMenu::class;
+        return Menu::class;
     }
-
-    
 
     /**
      * Boot up the repository, pushing criteria

@@ -1,13 +1,12 @@
 <?php
 
-$router->group(['prefix' => 'admin'], function($router){
 
-	$router->group(['prefix' => 'blog', 'as' => 'admin.blog.'], function($router){
-		$router->post('menu', [
-			'uses' => 'BlogController@menu',
-			'as' => 'menu'
-		]);
+$router->group(['prefix' => 'blog', 'as' => 'blog.'], function($router){
+
+	/*博客菜单*/
+	$router->group(['namespace' => 'Blog'], function($router){
+		$router->resource('menu', 'MenuController');
 	});
-
-	$router->resource('blog', 'BlogController');
 });
+
+$router->resource('blog', 'BlogController');

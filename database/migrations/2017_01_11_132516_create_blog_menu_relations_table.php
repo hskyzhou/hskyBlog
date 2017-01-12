@@ -21,6 +21,8 @@ class CreateBlogMenuRelationsTable extends Migration
 
             $table->integer('parent_blog_menu_id')->unsigned()->index();
             $table->foreign('parent_blog_menu_id')->references('id')->on('blog_menus')->onDelete('cascade');
+            
+            $table->tinyInteger('sort')->unsigned()->comment("排序");
 
             $table->timestamps();
 		});

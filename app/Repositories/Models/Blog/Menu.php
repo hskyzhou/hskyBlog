@@ -1,29 +1,32 @@
 <?php
 
-namespace App\Repositories\Models;
+namespace App\Repositories\Models\Blog;
 
 use Illuminate\Database\Eloquent\Model;
 use Prettus\Repository\Contracts\Transformable;
 use Prettus\Repository\Traits\TransformableTrait;
 
-class BlogMenu extends Model implements Transformable
+use App\Repositories\Models\Permission;
+
+class Menu extends Model implements Transformable
 {
     use TransformableTrait;
 
-    protected $fillable = ['title', 'slug', 'route', 'icon', 'status', 'desc', 'uri', 'high_uri'];
+    protected $table = 'blog_menus';
+    protected $fillable = ['title', 'slug', 'route', 'status', 'desc', 'uri', 'high_uri'];
 
     public function parentMenu(){
-    	return $this->belongsToMany(Menu::class, 'menu_relations', 'menu_id', 'parent_menu_id');
+    	return $this->belongsToMany(Menu::class, 'blog_menu_relations', 'blog_menu_id', 'parent_blog_menu_id');
     }
 
     public function sonMenus(){
-    	return $this->belongsToMany(Menu::class, 'menu_relations', 'parent_menu_id', 'menu_id')
+    	return $this->belongsToMany(Menu::class, 'blog_menu_relations', 'parent_blog_menu_id', 'blog_menu_id')
                     ->withPivot('sort')
                     ->orderBy('pivot_sort', 'asc');
     }
 
     public function activeSonMenus(){
-        return $this->belongsToMany(Menu::class, 'menu_relations', 'parent_menu_id', 'menu_id')
+        return $this->belongsToMany(Menu::class, 'blog_menu_relations', 'parent_blog_menu_id', 'blog_menu_id')
                     ->where('status', getStatusActive())
                     ->withPivot('sort')
                     ->orderBy('pivot_sort', 'asc');
@@ -32,5 +35,4 @@ class BlogMenu extends Model implements Transformable
     public function permission(){
     	return $this->hasOne(Permission::class, 'slug', 'slug');
     }
-
 }

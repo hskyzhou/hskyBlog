@@ -1,4 +1,4 @@
-@inject("presenter", "App\Presenters\Backend\MenuPresenter")
+@inject("presenter", "App\Presenters\Backend\Blog\MenuPresenter")
 
 @extends("themes.metronic.common.layout")
 
@@ -29,6 +29,16 @@
 <div class="row">
     <div class="col-md-6">
         <div class="portlet light bordered">
+            <div class="portlet-title">
+              <div class="actions">
+                <div class="btn-group btn-group-devided">
+                    <a href="{{route('blog.menu.create', ['id' => 0])}}" class="btn blue btn-outline btn-circle filter-add" data-target="#ajax" data-toggle="modal">
+                        <i class="fa fa-plus"></i>
+                        <span class="hidden-xs">添加</span>
+                    </a>
+                </div>
+              </div>
+            </div>
             <div class="portlet-body">
                 {!! $presenter->showMenus($manageMenus, $menuRelations) !!}
             </div>
@@ -44,7 +54,7 @@
 	$('#nestable_list_3').nestable().on('change', function(){
     App.blockUI({
       target: ".modal-content"
-    });
+    }); 
     $this = $(this);
     var url = $this.data('url');
     var data= window.JSON.stringify($this.nestable('serialize'));
