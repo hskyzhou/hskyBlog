@@ -100,12 +100,7 @@
 	                    </div>
 	                    <div class="block-content block-content-full">
 	                        <div class="btn-group">
-	                            <a class="btn btn-default" href="javascript:void(0)" data-toggle="tooltip" title="Follow us on Twitter"><i class="fa fa-fw fa-twitter"></i></a>
-	                            <a class="btn btn-default" href="javascript:void(0)" data-toggle="tooltip" title="Like our Facebook page"><i class="fa fa-fw fa-facebook"></i></a>
-	                            <a class="btn btn-default" href="javascript:void(0)" data-toggle="tooltip" title="Follow us on Google Plus"><i class="fa fa-fw fa-google-plus"></i></a>
-	                            <a class="btn btn-default" href="javascript:void(0)" data-toggle="tooltip" title="Follow us on Dribbble"><i class="fa fa-fw fa-dribbble"></i></a>
-	                            <a class="btn btn-default" href="javascript:void(0)" data-toggle="tooltip" title="Subscribe on Youtube"><i class="fa fa-fw fa-youtube"></i></a>
-	                            <a class="btn btn-default" href="javascript:void(0)" data-toggle="tooltip" title="Subscribe on Youtube"><i class="fa fa-fw fa-youtube"></i></a>
+	                        <a class="btn btn-default" href="https://github.com/hskyzhou" data-toggle="tooltip" title="Follow us on Github"><i class="fa fa-fw fa-github"></i></a>
 	                        </div>
 	                    </div>
 	                </div>
