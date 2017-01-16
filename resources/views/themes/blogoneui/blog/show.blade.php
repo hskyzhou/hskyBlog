@@ -29,8 +29,8 @@
 	    </section>
 	</div>
 	<!-- END Story Content -->
-
-	<div class="bg-primary-dark">
+	
+	<div class="bg-white">
 		<section class="content content-boxed">
 		    <!-- Section Content -->
 		    <div class="row push-30-t push-30">
