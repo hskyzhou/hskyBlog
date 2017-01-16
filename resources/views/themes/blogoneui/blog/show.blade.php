@@ -30,19 +30,24 @@
 	</div>
 
 	<!--PC版-->
-	<div id="SOHUCS" sid="{{$articleInfo->id}}"></div>
-	<script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
-	<script type="text/javascript">
-		window.changyan.api.config({
-		appid: 'cysMGheCq',
-		conf: 'prod_af08e4d88351c6b722441386de1de162'
-		});
-	</script>
+	<div class="bg-white">
+	    <section class="content content-boxed">
+			<a href="#SOHUCS" id="changyan_count_unit"></a>//评论数
+			<a href="#SOHUCS" id="changyan_parti_unit"></a>//参与数
+			<script type="text/javascript" src="http://assets.changyan.sohu.com/upload/plugins/plugins.count.js">
+			</script>
 
-	<a href="#SOHUCS" id="changyan_count_unit"></a>//评论数
-	<a href="#SOHUCS" id="changyan_parti_unit"></a>//参与数
-	<script type="text/javascript" src="http://assets.changyan.sohu.com/upload/plugins/plugins.count.js">
-	</script>
+			<div id="SOHUCS" sid="{{$articleInfo->id}}"></div>
+			<script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
+			<script type="text/javascript">
+				window.changyan.api.config({
+				appid: 'cysMGheCq',
+				conf: 'prod_af08e4d88351c6b722441386de1de162'
+				});
+			</script>
+		</section>
+	</div>
+	
 	<!-- END Story Content -->
 
 	<!-- More Stories -->
