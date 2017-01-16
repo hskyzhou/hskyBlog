@@ -43,12 +43,13 @@ class BlogService{
 	public function show($id){
 		/*获取最新的8篇*/
 		$articleLasts = $this->articleRepo->last();
+		
 		/*文章详情*/
 		$articleInfo = $this->articleRepo->with(['user'])->find($id);
 
 		return [
 			'articleInfo' => $articleInfo,
-			'articleList' => $articleList,
+			'articleLasts' => $articleLasts,
 		];
 	}
 }

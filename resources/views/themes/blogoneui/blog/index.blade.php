@@ -6,8 +6,8 @@
 	    <section class="content content-full content-boxed overflow-hidden">
 	        <!-- Section Content -->
 	        <div class="push-100-t push-50 text-center">
-	            <h1 class="h2 text-white push-10 visibility-hidden" data-toggle="appear" data-class="animated fadeInDown">The latest stories only for you.</h1>
-	            <h2 class="h5 text-white-op visibility-hidden" data-toggle="appear" data-class="animated fadeInDown">Feel free to explore and read.</h2>
+	            <h1 class="h2 text-white push-10 visibility-hidden" data-toggle="appear" data-class="animated fadeInDown">以我手写我之心得</h1>
+	            <h2 class="h5 text-white-op visibility-hidden" data-toggle="appear" data-class="animated fadeInDown">些许感悟</h2>
 	        </div>
 	        <!-- END Section Content -->
 	    </section>
@@ -21,31 +21,8 @@
 	        <div class="row">
 	            <div class="col-md-8">
 	                {!! $presenter->showArticleList($articleList) !!}
-
-	                <!-- Pagination -->
-	                <nav>
-	                    <ul class="pagination">
-	                        <li class="active">
-	                            <a href="javascript:void(0)">1</a>
-	                        </li>
-	                        <li>
-	                            <a href="javascript:void(0)">2</a>
-	                        </li>
-	                        <li>
-	                            <a href="javascript:void(0)">3</a>
-	                        </li>
-	                        <li>
-	                            <a href="javascript:void(0)">4</a>
-	                        </li>
-	                        <li>
-	                            <a href="javascript:void(0)">5</a>
-	                        </li>
-	                        <li>
-	                            <a href="javascript:void(0)"><i class="fa fa-angle-right"></i></a>
-	                        </li>
-	                    </ul>
-	                </nav>
-	                <!-- END Pagination -->
+					
+					{!! $articleList->links() !!}
 	            </div>
 	            <div class="col-md-4">
 	                <!-- Search -->
@@ -120,9 +97,9 @@
 	                        <ul class="list list-simple">
 	                            {!! $presenter->showCommentList($comments) !!}
 	                        </ul>
-	                        <div class="text-center push">
+	                        {{-- <div class="text-center push">
 	                            <small><a href="javascript:void(0)">Read More..</a></small>
-	                        </div>
+	                        </div> --}}
 	                    </div>
 	                </div>
 	                <!-- END Recent Comments -->

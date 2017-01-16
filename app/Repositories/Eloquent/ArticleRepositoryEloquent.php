@@ -31,7 +31,7 @@ class ArticleRepositoryEloquent extends BaseRepository implements ArticleReposit
         $this->applyCriteria();
         $this->applyScope();
 
-        $results = $this->model->limit(8);
+        $results = $this->model->with(['user'])->limit(6)->get();
         $this->resetModel();
         return $results;
     }
