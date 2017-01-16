@@ -30,6 +30,29 @@
 	</div>
 	<!-- END Story Content -->
 
+	<div class="bg-drak">
+		<section class="content content-boxed">
+		    <!-- Section Content -->
+		    <div class="row push-30-t push-30">
+				<div class="col-sm-8 col-sm-offset-2">
+		            <!-- 畅言评论开始 -->
+					<script type="text/javascript" src="http://assets.changyan.sohu.com/upload/plugins/plugins.count.js">
+					</script>
+
+					<div id="SOHUCS" sid="{{$articleInfo->id}}"></div>
+					<script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
+					<script type="text/javascript">
+						window.changyan.api.config({
+						appid: 'cysMGheCq',
+						conf: 'prod_af08e4d88351c6b722441386de1de162'
+						});
+					</script>
+					<!-- 畅言评论结束 -->
+				</div>
+			</div>
+		</section>
+	</div>
+
 	<!-- More Stories -->
 	<section class="content content-boxed">
 	    <!-- Section Content -->
@@ -52,27 +75,4 @@
 	    </div>
 	    <!-- END Section Content -->
 	</section>
-
-	<div class="bg-white">
-		<section class="content content-boxed">
-		    <!-- Section Content -->
-		    <div class="row push-30-t push-30">
-				<div class="col-sm-8 col-sm-offset-2">
-		            <!-- 畅言评论开始 -->
-					<script type="text/javascript" src="http://assets.changyan.sohu.com/upload/plugins/plugins.count.js">
-					</script>
-
-					<div id="SOHUCS" sid="{{$articleInfo->id}}"></div>
-					<script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
-					<script type="text/javascript">
-						window.changyan.api.config({
-						appid: 'cysMGheCq',
-						conf: 'prod_af08e4d88351c6b722441386de1de162'
-						});
-					</script>
-					<!-- 畅言评论结束 -->
-				</div>
-			</div>
-		</section>
-	</div>
 @endsection
