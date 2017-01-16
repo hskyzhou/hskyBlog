@@ -30,7 +30,7 @@
 	</div>
 	<!-- END Story Content -->
 
-	<div class="bg-drak">
+	<div class="bg-primary-dark">
 		<section class="content content-boxed">
 		    <!-- Section Content -->
 		    <div class="row push-30-t push-30">
