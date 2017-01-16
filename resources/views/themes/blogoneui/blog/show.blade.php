@@ -29,6 +29,29 @@
 	    </section>
 	</div>
 	<!-- END Story Content -->
+
+	<!-- More Stories -->
+	<section class="content content-boxed">
+	    <!-- Section Content -->
+	    <div class="row push-30-t push-30">
+	    	@if(!$articleLasts->isEmpty())
+	    		@foreach($articleLasts as $articleLast)
+	    			<div class="col-sm-4">
+	    			    <a class="block block-link-hover2" href="{{route('blog.show', [$articleLast->id])}}">
+	    			        <div class="block-content bg-image" style="background-image: url('assets/img/photos/photo2.jpg');">
+	    			            <h4 class="text-white push-50-t push">{{$articleLast->name}}</h4>
+	    			        </div>
+	    			        <div class="block-content block-content-full font-s12">
+	    			            <em class="pull-right">12 min</em>
+	    			            <span class="text-primary">{{$articleLast->user->name}}</span> {{$articleLast->created_at->format('M d, Y')}}
+	    			        </div>
+	    			    </a>
+	    			</div>
+	    		@endforeach
+	    	@endif
+	    </div>
+	</section>
+    <!-- END Section Content -->
 	
 	<div class="bg-white">
 		<section class="content content-boxed">
@@ -52,27 +75,4 @@
 			</div>
 		</section>
 	</div>
-
-	<!-- More Stories -->
-	<section class="content content-boxed">
-	    <!-- Section Content -->
-	    <div class="row push-30-t push-30">
-	    	@if(!$articleLasts->isEmpty())
-	    		@foreach($articleLasts as $articleLast)
-	    			<div class="col-sm-4">
-	    			    <a class="block block-link-hover2" href="{{route('blog.show', [$articleLast->id])}}">
-	    			        <div class="block-content bg-image" style="background-image: url('assets/img/photos/photo2.jpg');">
-	    			            <h4 class="text-white push-50-t push">{{$articleLast->name}}</h4>
-	    			        </div>
-	    			        <div class="block-content block-content-full font-s12">
-	    			            <em class="pull-right">12 min</em>
-	    			            <span class="text-primary">{{$articleLast->user->name}}</span> {{$articleLast->created_at->format('M d, Y')}}
-	    			        </div>
-	    			    </a>
-	    			</div>
-	    		@endforeach
-	    	@endif
-	    </div>
-	    <!-- END Section Content -->
-	</section>
 @endsection
