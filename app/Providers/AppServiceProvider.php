@@ -7,6 +7,7 @@ use Illuminate\Support\ServiceProvider;
 use App\Composers\MenuComposer;
 use App\Composers\ThemeComposer;
 use App\Composers\UserComposer;
+use App\Composers\Blog\MenuComposer as BlogMenuComposer;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -19,6 +20,7 @@ class AppServiceProvider extends ServiceProvider
         /*菜单composer*/
         view()->composer('themes.*.sidebar', MenuComposer::class);
         view()->composer('themes.*.head', UserComposer::class);
+        view()->composer('themes.*.header', BlogMenuComposer::class);
         view()->composer('*', ThemeComposer::class);
 
         // \App\User::saving(function($query){

@@ -61,4 +61,9 @@ class BlogPresenter{
 
 		return $str;
 	}
+
+	/*详情页-显示最近文章*/
+	public function showLastArticles($articleList){
+
+	}
 }

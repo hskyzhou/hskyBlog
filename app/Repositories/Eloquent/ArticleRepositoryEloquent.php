@@ -27,7 +27,14 @@ class ArticleRepositoryEloquent extends BaseRepository implements ArticleReposit
         return Article::class;
     }
 
-    
+    public function last(){
+        $this->applyCriteria();
+        $this->applyScope();
+
+        $results = $this->model->with(['user'])->limit(6)->get();
+        $this->resetModel();
+        return $results;
+    }
 
     /**
      * Boot up the repository, pushing criteria

@@ -1,0 +1,32 @@
+<?php
+
+namespace App\Repositories\Eloquent\Blog;
+
+use Prettus\Repository\Eloquent\BaseRepository;
+use Prettus\Repository\Criteria\RequestCriteria;
+use App\Repositories\Contracts\Blog\MenuRepository;
+use App\Repositories\Models\Blog\Menu;
+
+/**
+ * Class MenuRepositoryEloquent
+ * @package namespace App\Repositories\Eloquent;
+ */
+class MenuRepositoryEloquent extends BaseRepository implements MenuRepository{
+    /**
+     * Specify Model class name
+     *
+     * @return string
+     */
+    public function model()
+    {
+        return Menu::class;
+    }
+
+    /**
+     * Boot up the repository, pushing criteria
+     */
+    public function boot()
+    {
+        $this->pushCriteria(app(RequestCriteria::class));
+    }
+}

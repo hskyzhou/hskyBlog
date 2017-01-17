@@ -16,3 +16,6 @@ require __DIR__ . '/breadcrumbs/log.php';
 
 /*文章*/
 require __DIR__ . '/breadcrumbs/article.php';
+
+/*博客*/
+require __DIR__ . '/breadcrumbs/blog.php';
