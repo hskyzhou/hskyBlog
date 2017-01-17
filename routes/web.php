@@ -13,10 +13,6 @@
 
 /*后台功能*/
 $router->group(['namespace' => 'Backend', 'middleware' => ['auth', 'menu.permission']], function($router){
-	$router->get('/', [
-		'uses' => 'UserController@index',
-		'as' => 'user.index'
-	]);
 	/*权限路由*/
 	require(__DIR__ . '/backend/permissionRoute.php');
 	
@@ -35,6 +31,11 @@ $router->group(['namespace' => 'Backend', 'middleware' => ['auth', 'menu.permiss
 
 /*前台功能*/
 $router->group(['namespace' => 'Front'], function($router){
+	$router->get('/', [
+		'uses' => 'BlogController@index',
+		'as' => 'blog.index'
+	]);
+
 	/*文章*/
 	require(__DIR__ . '/front/blogRoute.php');
 });
