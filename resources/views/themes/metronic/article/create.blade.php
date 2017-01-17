@@ -10,6 +10,8 @@
   <link href="{{asset('themes/metronic/global/plugins/bootstrap-select/css/bootstrap-select.min.css')}}" rel="stylesheet" type="text/css" />
   <link href="{{asset('themes/metronic/global/plugins/select2/css/select2.min.css')}}" rel="stylesheet" type="text/css" />
   <link href="{{asset('themes/metronic/global/plugins/select2/css/select2-bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+  <link href="{{asset('themes/metronic/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css')}}" rel="stylesheet" type="text/css" />
+
 
   <link href="{{asset('mdeditor/css/editormd.min.css')}}" rel="stylesheet" type="text/css">
   <style type="text/css"> 
@@ -82,6 +84,24 @@
                         </div>
                       </div>
 
+                      <div class="form-group last">
+                          <label class="control-label col-md-2">Logo</label>
+                          <div class="col-md-8">
+                              <div class="fileinput fileinput-new" data-provides="fileinput">
+                                  <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
+                                      <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt="" /> </div>
+                                  <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"> </div>
+                                  <div>
+                                      <span class="btn default btn-file">
+                                          <span class="fileinput-new"> Select image </span>
+                                          <span class="fileinput-exists"> Change </span>
+                                          <input type="file" name="..."> </span>
+                                      <a href="javascript:;" class="btn red fileinput-exists" data-dismiss="fileinput"> Remove </a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
                       <div class="form-group form-md-line-input">
                         <label class="col-md-2 control-label" for="form_control_1">{{trans('label.article.content')}}</label>
                         <div class="col-md-8">
@@ -118,6 +138,7 @@
   <script src="{{asset('themes/metronic/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js')}}" type="text/javascript"></script>
   <script src="{{asset('themes/metronic/global/plugins/bootstrap-select/js/bootstrap-select.min.js')}}" type="text/javascript"></script>
   <script src="{{asset('themes/metronic/global/plugins/select2/js/select2.full.min.js')}}" type="text/javascript"></script>
+  <script src="{{asset('themes/metronic/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js')}}" type="text/javascript"></script>
 	<script type="text/javascript">
     $(".select2, .select2-multiple").select2({
     });
