@@ -96,6 +96,15 @@ class ArticleService{
 			'message' => '添加失败'
 		];
 
+		/*上传文章logo*/
+		$logoPath = '';
+		$logoName = '';
+		if(request()->file('logo')->isValid()){
+			$logoPath = 'public';
+			$storeLogoPath = request()->logo->store($logoPath);
+			$logoName = str_replace($logoPath, '', $storeLogoPath);
+		}
+
 		$creaotrId = getUserId();
 		$data = [
 			'name' => request('name'),
@@ -104,6 +113,8 @@ class ArticleService{
 			'html' => request('editormd-html-code'),
 			'creator_id' => $creaotrId,
 			'status' => request('status', getStatusActive()),
+			'logo_name' => $logoName,
+			'logo_path' => $logoPath,
 		];
 
 		if($articleInfo = $this->articleRepo->create($data)){

@@ -16,7 +16,11 @@ class BlogPresenter{
 				$str .= '        <div class="row items-push">';
 				$str .= '            <div class="col-md-4">';
 				$str .= '                <a href="'.route('blog.show', [$articleInfo->id]).'">';
-				$str .= '                    <img class="img-responsive" src="'.$articleInfo->logo.'" alt="">';
+				if($articleInfo->logo_name){
+					$str .= '	            <img class="img-responsive" src="'.asset('storage' . $articleInfo->logo_name).'" alt="">';
+				}else{
+					$str .= '               <img class="img-responsive" src="'.asset('default.jpg').'" alt="">';
+				}
 				$str .= '                </a>';
 				$str .= '            </div>';
 				$str .= '            <div class="col-md-8">';

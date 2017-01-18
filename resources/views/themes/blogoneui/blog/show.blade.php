@@ -38,7 +38,12 @@
 	    		@foreach($articleLasts as $articleLast)
 	    			<div class="col-sm-4">
 	    			    <a class="block block-link-hover2" href="{{route('blog.show', [$articleLast->id])}}">
-	    			        <div class="block-content bg-image" style="background-image: url('assets/img/photos/photo2.jpg');">
+	    			    		@if($articleLast->logo_name)
+	    			    			<div class="block-content bg-primary-dark bg-image " style="background-image: url({{asset('storage' . $articleLast->logo_name)}});">
+	    			    		@else
+	    			    			<div class="block-content bg-primary-dark bg-image " style="background-image: url({{asset('default.jpg')}});">
+	    			    		@endif
+	    			        
 	    			            <h4 class="text-white push-50-t push">{{$articleLast->name}}</h4>
 	    			        </div>
 	    			        <div class="block-content block-content-full font-s12">

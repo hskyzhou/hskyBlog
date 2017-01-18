@@ -41,7 +41,7 @@
       <div class="portlet light portlet-fit portlet-form bordered">
           <div class="portlet-body">
               <!-- BEGIN FORM-->
-              <form action="{{route('article.store')}}" class="form-horizontal" method="post">
+              <form action="{{route('article.store')}}" class="form-horizontal" method="post" enctype="multipart/form-data">
                   {!! csrf_field() !!}
                   <div class="form-body">
                       <div class="form-group form-md-line-input">
@@ -95,7 +95,7 @@
                                       <span class="btn default btn-file">
                                           <span class="fileinput-new"> Select image </span>
                                           <span class="fileinput-exists"> Change </span>
-                                          <input type="file" name="..."> </span>
+                                          <input type="file" name="logo"> </span>
                                       <a href="javascript:;" class="btn red fileinput-exists" data-dismiss="fileinput"> Remove </a>
                                   </div>
                               </div>

@@ -11,7 +11,7 @@ class Article extends Model implements Transformable
     use TransformableTrait;
 
     protected $fillable = [
-    	'name', 'short_name', 'markdown', 'html', 'creator_id', 'status', 'created_at', 'updated_at',
+    	'name', 'short_name', 'markdown', 'html', 'creator_id', 'status', 'created_at', 'updated_at', 'logo_name', 'logo_path',
     ];
 
     /*scope*/
